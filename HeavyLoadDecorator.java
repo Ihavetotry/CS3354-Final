@@ -1,0 +1,9 @@
+public class HeavyLoadDecorator extends ShippingDecorator {
+    public HeavyLoadDecorator(ShippingStrategy wrappedStrategy) {
+        super(wrappedStrategy);
+    }
+    @Override
+    public double calculate(double weight, double distance) {
+        return getWrappedStrategy().calculate(weight, distance) + 15.0;
+    }
+}
