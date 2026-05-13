@@ -56,7 +56,7 @@ public class SimpleShippingApp extends JFrame {
 					// 2. Add Handling Fee (The "Heavy Load" logic)
 					// Instead of a Decorator, we just use a hardcoded if-statement
 					if (weight > 20) {
-						cost = new HeavyLoadDecorator(cost);
+						ship = new HeavyLoadDecorator(ship);
 					}
 
 					resultArea.append(policy + ": $" + cost + surchargeNote + "\n");
